@@ -1,5 +1,7 @@
 package co.mobilemakers.wikipediatrekships;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Star Trek ship model class(*).
  *
@@ -8,11 +10,18 @@ package co.mobilemakers.wikipediatrekships;
  * Created by ariel.cattaneo on 17/02/2015.
  */
 public class ShipModel {
+    @SerializedName("pageid")
+    private int mPageId;
+    @SerializedName("title")
     private String mName;
     private String mRegistry;
     private String mShipClass;
     private int mYearLaunched;
     private String mFirstAppearance;
+
+    public int getPageId() {
+        return mPageId;
+    }
 
     public String getName() {
         return mName;
